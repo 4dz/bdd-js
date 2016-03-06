@@ -9,7 +9,14 @@
 
   FizzBuzz.prototype = {
     toString: function() {
+      if(this.isExactlyDivisibleBy(3)) {
+        return "fizz";
+      }
       return "" + this.number;
+    },
+
+    isExactlyDivisibleBy: function(dividedBy) {
+      return this.number % dividedBy == 0;
     }
   };
 
